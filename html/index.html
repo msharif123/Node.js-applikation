@@ -7,7 +7,99 @@
 </head>
 <body>
 
-    <h1>My first Application</h1>
+   
+
+
+    <br>
     
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" class="input-field" placeholder="Username" required>
+            <input type="password" id="password" class="input-field" placeholder="Password" required>
+            <button type="submit" class="btn">Login</button>
+            <p id="error" class="error"></p>
+        </form>
+    </div>
+
+    <script>
+        // Simple JavaScript to simulate login validation
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorElement = document.getElementById('error');
+
+            // Example credentials (You would typically check against a database in real applications)
+            const validUsername = 'user123';
+            const validPassword = 'password123';
+
+            // Simple validation
+            if (username === validUsername && password === validPassword) {
+                alert('Login successful!');
+                // Redirect to a new page or load content, example:
+                // window.location.href = "dashboard.html";
+            } else {
+                errorElement.textContent = 'Invalid username or password.';
+            }
+        });
+    </script>
+</body>
+</html>
+
+
 </body>
 </html>

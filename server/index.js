@@ -1,9 +1,15 @@
- const express = require ("express")
+
+
+// börja med att skapa en server
+
+const express = require ("express")
 const app = express()
+
+
 
  const info= require ("../modules/info")
 
-//env
+
 require ("dotenv").config()
 
  app.use(express.json()) 
@@ -63,12 +69,9 @@ try {
     
 }
 
-app.set("view engine", "ejs")
 
-    app.get("/login", (req, res)=>{
-        res.render("login.ejs")
-    })
 
+  
  })
  //update 
 

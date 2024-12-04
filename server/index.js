@@ -62,7 +62,12 @@ try {
     res.status(500).json({message: error.message})
     
 }
-    
+
+app.set("view engine", "ejs")
+
+    app.get("/login", (req, res)=>{
+        res.render("login.ejs")
+    })
 
  })
  //update 
@@ -98,9 +103,9 @@ app.delete("/info/:id", async (req, res)=>{
 /
 
  
- app.get("/", (req,res)=>{
-     res.sendFile(path.join(__dirname, "./html/index.html"))
- })
+//  app.get("/", (req,res)=>{
+//      res.sendFile(path.join(__dirname, "./html/index.html"))
+//  })
 
  
 

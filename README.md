@@ -19,4 +19,4 @@ i denna applkaton använde jag :
 -updatera en eller flera info,
 -radera en eller flera info,
 -skicka en eller flera info,
-get all info, get info by id, post info, uppdate info och Delete info"
+get all info, get info by id, post info, uppdate info och Delete info" som man kan testa i postman 

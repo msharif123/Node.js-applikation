@@ -15,19 +15,19 @@ require ("dotenv").config()
  app.use(express.json()) 
 
 
- const port = process.env.PORT || 3500  // belastnng - loadig 
-
+ const port = process.env.PORT || 3500  
+ 
+//connect to DB
  const connectDB= require ("../Database/db")
 const Info = require("../modules/info")
 
 
-
+// testa om det lysta på localhost
  app.get ("/", (req, res)=>{
      res.send("Hello world")
  })
 
-
-
+ //hämta alla info
  app.get ("/info", async (req, res)=>{
 
    try {
@@ -40,8 +40,8 @@ const Info = require("../modules/info")
     
    }
  })
-//  
 
+//hämta info via ID 
  app.get ("/info/:id", async (req,res)=>{
     try {
         const {id}= req.params
@@ -55,6 +55,7 @@ const Info = require("../modules/info")
         
     }
  })
+ // skicka new info
  app.post("/info", async (req, res)=>{
    // console.log(req.body)  
  //res.send(req.body)      // console log to try if it works with postman {"":"",}
@@ -69,11 +70,9 @@ try {
     
 }
 
-
-
   
  })
- //update 
+ //updatera en eller flera info
 
  app.put("/info/:id", async( req, res)=>{
     try {
@@ -88,7 +87,7 @@ try {
  })
 
 
-//delete 
+// radera en eller flera info 
 
 app.delete("/info/:id", async (req, res)=>{
   try{  
@@ -110,25 +109,16 @@ app.delete("/info/:id", async (req, res)=>{
 //      res.sendFile(path.join(__dirname, "./html/index.html"))
 //  })
 
- 
-
-
-connectDB()
-
- 
-
 
 //  app.listen(port,()=>{
 //      console.log("This serveris runing in locallhost port 3700")
 // })
  
-
-
-
-
 //mongodb+srv://mongo:<db_password>@cluster0.pp95b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 
+
+connectDB()
 
 app.listen( port, ()=>{
 console.log (`This server is runign on port ${port}`)

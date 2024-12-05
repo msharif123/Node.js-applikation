@@ -1,22 +1,21 @@
 # Node.js-applikation
 
 
-i denna applkaton använde jag :
+i denna applkaton använde jag följande verktyg  :
 
 
 -express för att skapa server
--installera node och npm 
--instalera flera olika package som man hitta i under dependencies: dotenv
-"express, mongodb,nodemon.
-
--dotenv för känsla info ex: användnamn och lösenord ""miljö variables""
+- node och npm 
+-instalera flera olika package som man listas under dependencies: dotenv
+"express, mongodb,nodemon.....
+-dotenv används för att hantera känsla info ex: användnamn och lösenord ""miljö variables""
+applicationen innehåller också följande funktionalitet
 - middleware "json"
-- port 3500 
-- mongoDb
--olika router.
- för att hämta alla info, 
--hämta en ifo med en Id, 
--updatera en eller flera info,
--radera en eller flera info,
--skicka en eller flera info,
-get all info, get info by id, post info, uppdate info och Delete info" som man kan testa i postman 
+- port 3500 för att lysta i localhost
+- mongoDb för datalagring med olika rutter
+- Dessa rutter kan testas med följande medtoder i postman 
+- GET för att hämta alla info, eller hämta en ifo via ID, 
+  PUT updatera en eller flera info,
+-DELETE radera en eller flera info,
+-POST skicka en eller flera info,
+  
